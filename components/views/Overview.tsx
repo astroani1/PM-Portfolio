@@ -1,5 +1,5 @@
 import React from 'react';
-import { User, Layers, Code, ChevronRight, Globe, Zap } from 'lucide-react';
+import { User, Layers, Code, ChevronRight, Globe, Zap, TrendingUp, Bot, Mail, Linkedin, Phone, Github } from 'lucide-react';
 import GlassCard from '../GlassCard';
 import { PROJECTS, PROFILE } from '../../constants';
 import { TabType, Project } from '../../types';
@@ -33,19 +33,19 @@ const Overview: React.FC<OverviewProps> = ({ setTab }) => {
     <div className="animate-fadeIn space-y-10 pb-20">
       <div className="space-y-2 mb-12 mt-4">
         <h2 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-indigo-200 to-indigo-400 tracking-tight">
-          Building Digital Products.
+          Product Manager (AI)
         </h2>
         <p className="text-xl text-white/60 max-w-2xl font-light leading-relaxed">
-          Bridging the gap between Engineering, Operations, and User Experience.
+          Turning user insights into shipped products that bridge engineering, operations, marketing, and experience.
         </p>
       </div>
 
       {/* Stats Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
         <StatCard 
-          icon={User} 
+          icon={TrendingUp} 
           val="100K+" 
-          label="Monthly Reach" 
+          label="Technosports' Monthly Reach" 
           colorClass="bg-orange-500/20 text-orange-300"
         />
         <StatCard 
@@ -55,9 +55,9 @@ const Overview: React.FC<OverviewProps> = ({ setTab }) => {
           colorClass="bg-blue-500/20 text-blue-300"
         />
         <StatCard 
-          icon={Code} 
-          val="AI/ML" 
-          label="Specialization" 
+          icon={Bot} 
+          val="Product & AI" 
+          label="Learning by Building" 
           colorClass="bg-purple-500/20 text-purple-300"
         />
       </div>
@@ -92,18 +92,56 @@ const Overview: React.FC<OverviewProps> = ({ setTab }) => {
       </div>
       
       {/* Mobile Profile Section (since Sidebar is hidden on mobile) */}
-      <div className="lg:hidden pt-8 border-t border-white/10">
+      <div className="lg:hidden pt-8 border-t border-white/10 pb-8">
          <div className="flex items-center gap-4 mb-4">
-           <img src={PROFILE.image} alt={PROFILE.name} className="w-16 h-16 rounded-2xl object-cover" />
+           <img src={PROFILE.image} alt={PROFILE.name} className="w-16 h-16 rounded-2xl object-cover shadow-lg border border-white/10" />
            <div>
              <h3 className="text-xl font-bold text-white">{PROFILE.name}</h3>
              <p className="text-indigo-300 text-sm">{PROFILE.role}</p>
            </div>
          </div>
          <p className="text-sm text-white/60 leading-relaxed mb-6">{PROFILE.summary}</p>
-         <div className="flex gap-3">
-            <a href={PROFILE.social.linkedin} className="px-4 py-2 rounded-xl bg-[#0077b5]/20 text-[#0077b5] text-sm font-medium">LinkedIn</a>
-            <a href={`mailto:${PROFILE.email}`} className="px-4 py-2 rounded-xl bg-white/10 text-white text-sm font-medium">Email</a>
+         
+         <div className="flex gap-4">
+            {/* Email */}
+            <a 
+               href={`mailto:${PROFILE.email}`}
+               className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-white active:scale-95 transition-all hover:bg-white/10"
+               aria-label="Send Email"
+            >
+              <Mail size={20} className="opacity-70" />
+            </a>
+
+            {/* Call */}
+            <a 
+               href={`tel:${PROFILE.phone}`}
+               className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-white active:scale-95 transition-all hover:bg-white/10"
+               aria-label="Call"
+            >
+              <Phone size={20} className="opacity-70" />
+            </a>
+
+            {/* LinkedIn */}
+            <a 
+              href={PROFILE.social.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              className="w-12 h-12 rounded-2xl bg-[#0077b5] flex items-center justify-center text-white active:scale-95 transition-all shadow-[0_0_15px_rgba(0,119,181,0.3)] hover:shadow-[0_0_20px_rgba(0,119,181,0.5)]"
+              aria-label="LinkedIn"
+            >
+               <Linkedin size={20} fill="currentColor" strokeWidth={0} />
+            </a>
+
+            {/* GitHub */}
+             <a 
+              href={PROFILE.social.github}
+              target="_blank"
+              rel="noreferrer"
+              className="w-12 h-12 rounded-2xl bg-[#1a1d21] border border-white/10 flex items-center justify-center text-white active:scale-95 transition-all shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:shadow-[0_0_20px_rgba(255,255,255,0.2)]"
+              aria-label="GitHub"
+            >
+              <Github size={20} />
+            </a>
          </div>
       </div>
     </div>

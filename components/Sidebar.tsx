@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Linkedin, MapPin, ExternalLink } from 'lucide-react';
+import { Mail, Linkedin, MapPin, Phone, Github } from 'lucide-react';
 import { PROFILE } from '../constants';
 import GlassCard from './GlassCard';
 
@@ -36,29 +36,48 @@ const Sidebar: React.FC = () => {
             </p>
           </div>
 
-          <div className="mt-auto pt-6 border-t border-white/10 flex gap-3">
+          {/* Updated Footer Actions */}
+          <div className="mt-auto pt-6 border-t border-white/10 grid grid-cols-4 gap-2.5">
+            {/* Email */}
             <a 
                href={`mailto:${PROFILE.email}`}
-               className="flex-1 py-3 rounded-2xl bg-white/10 hover:bg-white/20 border border-white/5 transition-all flex items-center justify-center gap-2 text-sm font-medium text-white group/btn shadow-lg"
+               className="aspect-square rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center text-white transition-all hover:scale-110 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)] group relative overflow-hidden"
+               aria-label="Send Email"
             >
-              <Mail size={16} className="group-hover/btn:scale-110 transition-transform" />
-              Contact
+              <div className="absolute inset-0 bg-gradient-to-tr from-indigo-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <Mail size={20} className="relative z-10 opacity-70 group-hover:opacity-100 transition-opacity" />
             </a>
+
+            {/* Call */}
+            <a 
+               href={`tel:${PROFILE.phone}`}
+               className="aspect-square rounded-2xl bg-white/5 hover:bg-emerald-500/20 border border-white/10 hover:border-emerald-500/30 flex items-center justify-center text-white transition-all hover:scale-110 hover:shadow-[0_0_15px_rgba(16,185,129,0.3)] group relative overflow-hidden"
+               aria-label="Call"
+            >
+              <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <Phone size={20} className="relative z-10 opacity-70 group-hover:opacity-100 group-hover:text-emerald-400 transition-all" />
+            </a>
+
+            {/* LinkedIn */}
             <a 
               href={PROFILE.social.linkedin}
               target="_blank"
               rel="noreferrer"
-              className="p-3 rounded-2xl bg-[#0077b5]/20 hover:bg-[#0077b5]/40 border border-[#0077b5]/30 text-[#0077b5] text-blue-300 transition-all shadow-lg"
+              className="aspect-square rounded-2xl bg-[#0077b5] flex items-center justify-center text-white transition-all hover:scale-110 hover:shadow-[0_0_20px_rgba(0,119,181,0.6)] relative group"
+              aria-label="LinkedIn"
             >
-              <Linkedin size={18} />
+               <Linkedin size={22} fill="currentColor" strokeWidth={0} className="relative z-10" />
             </a>
+
+            {/* GitHub */}
              <a 
               href={PROFILE.social.github}
               target="_blank"
               rel="noreferrer"
-              className="p-3 rounded-2xl bg-white/10 hover:bg-white/20 border border-white/10 text-white transition-all shadow-lg"
+              className="aspect-square rounded-2xl bg-[#1a1d21] border border-white/10 flex items-center justify-center text-white transition-all hover:scale-110 hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] relative group"
+              aria-label="GitHub"
             >
-              <ExternalLink size={18} />
+              <Github size={22} className="relative z-10" />
             </a>
           </div>
         </div>

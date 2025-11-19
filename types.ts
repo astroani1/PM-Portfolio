@@ -6,6 +6,7 @@ export interface Profile {
   role: string;
   location: string;
   email: string;
+  phone: string;
   summary: string;
   social: {
     linkedin: string;

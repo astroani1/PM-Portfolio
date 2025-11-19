@@ -6,6 +6,7 @@ export const PROFILE: Profile = {
   role: "Product & Operations Professional",
   location: "Kolkata, India",
   email: "ani20161998@gmail.com",
+  phone: "+918537037377",
   summary: "Product and operations professional with 5+ years spanning enterprise incident management and digital media entrepreneurship. Co-founded TechnoSports (scaling to 100K+ reach). Expert in product roadmapping, PRDs, market research, and agile delivery.",
   social: {
     linkedin: "https://www.linkedin.com/in/arnabdas7",

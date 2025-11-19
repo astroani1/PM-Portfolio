@@ -62,7 +62,7 @@ const App: React.FC = () => {
             <div className="w-3 h-3 rounded-full bg-[#FFBD2E] shadow-[0_0_10px_rgba(255,189,46,0.4)]"></div>
             <div className="w-3 h-3 rounded-full bg-[#27C93F] shadow-[0_0_10px_rgba(39,201,63,0.4)]"></div>
           </div>
-          <div className="hidden md:block text-[10px] font-bold tracking-[0.2em] text-white/30 uppercase">Arnab OS v2.0</div>
+          <div className="hidden md:block text-[10px] font-bold tracking-[0.2em] text-white/30 uppercase">Arnab's Tahoe Portfolio</div>
           <div className="flex items-center gap-4 text-white/70 text-sm font-medium tabular-nums">
             <span>{time.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</span>
             <div className="w-5 h-5 rounded-full bg-gradient-to-tr from-blue-400 to-indigo-500 shadow-lg"></div>

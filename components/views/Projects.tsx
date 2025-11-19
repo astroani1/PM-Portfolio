@@ -1,5 +1,5 @@
 import React from 'react';
-import { Globe, User, Zap, Code, ExternalLink, ArrowUpRight } from 'lucide-react';
+import { Globe, User, Zap, Code, ExternalLink, ArrowUpRight, Wallet, Plane } from 'lucide-react';
 import { PROJECTS } from '../../constants';
 import GlassCard from '../GlassCard';
 import { Project } from '../../types';
@@ -9,6 +9,8 @@ const getIcon = (type: Project['iconType']) => {
     case 'globe': return <Globe size={24} />;
     case 'user': return <User size={24} />;
     case 'zap': return <Zap size={24} />;
+    case 'wallet': return <Wallet size={24} />;
+    case 'plane': return <Plane size={24} />;
     default: return <Code size={24} />;
   }
 };
@@ -60,12 +62,26 @@ const ProjectsView: React.FC = () => {
                   </div>
 
                   <div className="flex gap-3 mt-8 pt-6 border-t border-white/5">
-                    <button className="px-5 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white text-sm font-medium transition-colors shadow-lg flex items-center gap-2">
-                      View PRD <ExternalLink size={14} className="opacity-50"/>
-                    </button>
-                    <button className="px-5 py-2.5 rounded-xl border border-white/10 hover:border-white/30 hover:bg-white/5 text-white text-sm font-medium transition-colors flex items-center gap-2">
-                      Live Demo <ArrowUpRight size={14} className="opacity-50"/>
-                    </button>
+                    {project.links?.prd && (
+                      <a 
+                        href={project.links.prd}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="px-5 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white text-sm font-medium transition-colors shadow-lg flex items-center gap-2"
+                      >
+                        View PRD <ExternalLink size={14} className="opacity-50"/>
+                      </a>
+                    )}
+                    {project.links?.demo && (
+                      <a 
+                        href={project.links.demo}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="px-5 py-2.5 rounded-xl border border-white/10 hover:border-white/30 hover:bg-white/5 text-white text-sm font-medium transition-colors flex items-center gap-2"
+                      >
+                        Live Demo <ArrowUpRight size={14} className="opacity-50"/>
+                      </a>
+                    )}
                   </div>
                </div>
             </div>

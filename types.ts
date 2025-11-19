@@ -28,7 +28,11 @@ export interface Project {
   tag: string;
   desc: string;
   metrics: string;
-  iconType: 'globe' | 'user' | 'zap' | 'code'; 
+  iconType: 'globe' | 'user' | 'zap' | 'code' | 'wallet' | 'plane'; 
+  links?: {
+    prd?: string;
+    demo?: string;
+  };
 }
 
 export interface SkillGroup {

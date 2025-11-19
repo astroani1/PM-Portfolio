@@ -43,18 +43,37 @@ export const EXPERIENCE: Experience[] = [
 
 export const PROJECTS: Project[] = [
   {
+    name: "SubSentry",
+    tag: "AI Subscription Manager",
+    desc: "All-in-one Subscription Manager with AI capabilities to fetch and manage regular and unwanted spends related to subscriptions.",
+    metrics: "Prototype Phase",
+    iconType: 'wallet',
+    links: {
+      prd: "https://drive.google.com/file/d/1BEEb_L0MCny_edPWIpbeeqOYOmam3wlo/view?usp=drive_link",
+      demo: "https://drive.google.com/file/d/18D7B8UTT5aME49j2y7TNrn9MoNeJOmjD/view?usp=sharing"
+    }
+  },
+  {
     name: "Triip",
     tag: "AI Travel Copilot",
-    desc: "Fine-tuned model prototype on India dataset. MVP focused on itinerary, budget, and eco-travel.",
+    desc: "AI Travel Copilot for GenZ. Fine-tuned MVP on India dataset, focused on itinerary, budget, and eco-travel.",
     metrics: "Guardrails <1.5s latency, ≤2% hallucination",
-    iconType: 'globe'
+    iconType: 'plane',
+    links: {
+      prd: "https://drive.google.com/file/d/1NCUKnFJuKSvW5wXKKbel2Ext4Rf1zM76/view?usp=sharing",
+      demo: "https://drive.google.com/file/d/1ChTQqPGgP1cYBgyZv0t7ate3LwuQ-4eD/view?usp=sharing"
+    }
   },
   {
     name: "HireMate",
     tag: "AI Mock Interviewer",
     desc: "Platform with freemium pricing tiers. GTM strategy involving Product Hunt and campus partners.",
     metrics: "NPS > 40, ≥10% paid conversion",
-    iconType: 'user'
+    iconType: 'user',
+    links: {
+      prd: "https://drive.google.com/file/d/1-5M7STAORwBWYRm4DMsNHNbViYVD301G/view?usp=sharing",
+      demo: "https://www.figma.com/design/OEHQCVWWC85mV0b03cQc0a/HireMate?node-id=14-2&p=f&t=H6uFEs2uC51SPEsk-0"
+    }
   },
   {
     name: "WhatsApp Smart AI",

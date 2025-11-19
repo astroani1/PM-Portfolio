@@ -58,13 +58,13 @@ const Dock: React.FC<DockProps> = ({ activeTab, setActiveTab, email }) => {
           onClick={() => setActiveTab('experience')} 
         />
         <DockItem 
-          icon={<Code size={22} strokeWidth={1.5} />} 
+          icon={<Cpu size={22} strokeWidth={1.5} />} 
           label="Projects" 
           isActive={activeTab === 'projects'} 
           onClick={() => setActiveTab('projects')} 
         />
         <DockItem 
-          icon={<Cpu size={22} strokeWidth={1.5} />} 
+          icon={<Code size={22} strokeWidth={1.5} />} 
           label="Skills" 
           isActive={activeTab === 'skills'} 
           onClick={() => setActiveTab('skills')} 

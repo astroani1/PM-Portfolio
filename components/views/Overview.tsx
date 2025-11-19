@@ -1,5 +1,5 @@
 import React from 'react';
-import { User, Layers, Code, ChevronRight, Globe, Zap, TrendingUp, Bot, Mail, Linkedin, Phone, Github } from 'lucide-react';
+import { User, Layers, Code, ChevronRight, Globe, Zap, TrendingUp, Bot, Mail, Linkedin, Phone, Github, Wallet, Plane } from 'lucide-react';
 import GlassCard from '../GlassCard';
 import { PROJECTS, PROFILE } from '../../constants';
 import { TabType, Project } from '../../types';
@@ -24,6 +24,8 @@ const getIcon = (type: Project['iconType']) => {
     case 'user': return <User size={20} />;
     case 'zap': return <Zap size={20} />;
     case 'code': return <Code size={20} />;
+    case 'wallet': return <Wallet size={20} />;
+    case 'plane': return <Plane size={20} />;
     default: return <Code size={20} />;
   }
 };

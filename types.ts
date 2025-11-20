@@ -35,10 +35,14 @@ export interface Project {
   };
 }
 
-export interface SkillGroup {
-  category: string;
-  items: string[];
-  iconType: 'strategy' | 'prioritization' | 'tools' | 'metrics';
+export interface Skill {
+  name: string;
+  logo?: 'figma' | 'jira' | 'notion' | 'servicenow' | 'huggingface' | 'n8n';
+}
+
+export interface Certification {
+  name: string;
+  issuer: string;
 }
 
 export interface Education {

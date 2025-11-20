@@ -1,4 +1,4 @@
-import { Profile, Experience, Project, SkillGroup, Education } from './types';
+import { Profile, Experience, Project, Skill, Certification, Education } from './types';
 
 export const PROFILE: Profile = {
   name: "Arnab Das",
@@ -45,7 +45,7 @@ export const PROJECTS: Project[] = [
   {
     name: "SubSentry",
     tag: "AI Subscription Manager",
-    desc: "All-in-one Subscription Manager with AI capabilities to fetch and manage regular and unwanted spends related to subscriptions.",
+    desc: "Capabilities to fetch, analyze, and manage subscriptions.",
     metrics: "Prototype Phase",
     iconType: 'wallet',
     links: {
@@ -84,28 +84,29 @@ export const PROJECTS: Project[] = [
   }
 ];
 
-export const SKILLS: SkillGroup[] = [
-  { 
-    category: "Strategy", 
-    items: ["User Interviews", "JTBD", "Problem Framing", "Hypothesis Design", "Competitor Research"],
-    iconType: 'strategy'
-  },
-  { 
-    category: "Prioritization", 
-    items: ["PRD Writing", "Roadmapping", "RICE / MoSCoW", "Backlog Grooming", "GTM"],
-    iconType: 'prioritization'
-  },
-  { 
-    category: "Tools", 
-    items: ["Figma", "Jira", "Notion", "ServiceNow", "Hugging Face", "n8n", "Excel"],
-    iconType: 'tools'
-  },
-  { 
-    category: "Metrics", 
-    items: ["NPS", "CAC", "CLTV", "LTV:CAC", "Adoption Rate", "Retention"],
-    iconType: 'metrics'
-  }
+export const SKILLS: Skill[] = [
+  { name: "Product Roadmapping" },
+  { name: "PRDs" },
+  { name: "Market Research" },
+  { name: "Agile/Scrum" },
+  { name: "User Interviews" },
+  { name: "JTBD" },
+  { name: "RICE/MoSCoW" },
+  { name: "Figma", logo: 'figma' },
+  { name: "Jira", logo: 'jira' },
+  { name: "Notion", logo: 'notion' },
+  { name: "ServiceNow", logo: 'servicenow' },
+  { name: "Hugging Face", logo: 'huggingface' },
+  { name: "n8n Automation", logo: 'n8n' }
 ];
+
+export const CERTIFICATIONS: Certification[] = [
+  { name: "Product Management", issuer: "IBM" },
+  { name: "Agile Development and Scrum", issuer: "IBM" },
+  { name: "Data Analytics Foundation", issuer: "Google" }
+];
+
+export const CERTIFICATIONS_URL = "https://www.linkedin.com/in/arnabdas7/details/certifications/";
 
 export const EDUCATION: Education[] = [
   {
